@@ -1730,7 +1730,7 @@ section {
   right: 0;
   bottom: 44px;
 
-  width: min(420px, calc(100vw - 36px));
+  width: min(260px, calc(100vw - 28px));
   max-height: min(72vh, 620px);
   overflow: auto;
 
@@ -1761,11 +1761,11 @@ section {
 }
 
 .impressumPopup h3 {
-  margin: 0 0 16px;
+  margin: 0 0 10px;
 
   color: #f3f0ea;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 1.1;
 }
@@ -1778,10 +1778,10 @@ section {
 
 .impressumPopup dl div {
   display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 16px;
+  grid-template-columns: 105px 1fr;
+  gap: 8px;
 
-  padding: 10px 0;
+  padding: 6px 0;
 
   border-top: 1px solid rgba(243, 240, 234, 0.08);
 }
@@ -1790,10 +1790,10 @@ section {
   color: rgba(243, 240, 234, 0.52);
 
   font-family: "Roboto Condensed", Arial, sans-serif;
-  font-size: 10px;
+  font-size: 8.5px;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1.35;
+  letter-spacing: 0.09em;
+  line-height: 1.25;
   text-transform: uppercase;
 }
 
@@ -1801,8 +1801,8 @@ section {
   margin: 0;
 
   color: rgba(243, 240, 234, 0.88);
-  font-size: 13px;
-  line-height: 1.45;
+  font-size: 10px;
+  line-height: 1.3;
 }
 
 .impressumPopup a {
@@ -1827,19 +1827,19 @@ section {
     right: 0;
     bottom: 42px;
 
-    width: calc(100vw - 28px);
-    max-height: 68vh;
+    width: min(300px, calc(100vw - 28px));
+    max-height: 58vh;
 
-    padding: 20px 18px 18px;
+    padding: 14px 14px 12px;
   }
 
   .impressumPopup dl div {
-    grid-template-columns: 1fr;
+    grid-template-columns: 95px 1fr;
     gap: 4px;
-    padding: 9px 0;
+    padding: 6px 0;
   }
 
   .impressumPopup dd {
-    font-size: 13px;
+    font-size: 11px;
   }
 }
