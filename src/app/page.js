@@ -823,9 +823,7 @@ export default function Home() {
         </div>
         <div className="footerBrandLogo">
           <img src="/logo.png" alt="MARLEN Atelier logó" />
-        </div>
-      </footer>
-<div className="impressumFloating">
+       <div className="impressumFloating">
   <button
     type="button"
     className="impressumTrigger"
@@ -899,7 +897,9 @@ export default function Home() {
       </div>
     </dl>
   </div>
-</div>
+</div> 
+       </div>
+      </footer>
     </main>
   );
 }
