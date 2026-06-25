@@ -1693,8 +1693,8 @@ section {
    ========================================================= */
 
 :root {
-  --impressum-button-right: 18px;
-  --impressum-button-bottom: 18px;
+  --impressum-button-right: 50px;
+  --impressum-button-bottom: 8px;
 }
 
 .impressumFloating {
