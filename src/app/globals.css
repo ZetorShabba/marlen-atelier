@@ -304,7 +304,7 @@ section {
 .heroImageLayer {
   position: absolute;
   inset: 0;
-  background-image: url("/marlen-atelier/herobackground.png");
+  background-image: url("/herobackground.png");
   background-size: auto 100%;
   background-position: right center;
   background-repeat: no-repeat;
@@ -588,7 +588,7 @@ section {
 .designersBackground {
   position: absolute;
   inset: 0;
-  background-image: url("/marlen-atelier/designers-bg.png");
+  background-image: url("/designers-bg.png");
   background-size: cover;
   background-position: right center;
   background-repeat: no-repeat;

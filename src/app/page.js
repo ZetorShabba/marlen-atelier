@@ -531,19 +531,19 @@ export default function Home() {
 
           <div className="aboutGallery" aria-hidden="true">
             <figure className="aboutImage aboutImage01">
-              <img src="/marlen-atelier/about/about-01.png" alt="" />
+              <img src="/about/about-01.png" alt="" />
             </figure>
 
             <figure className="aboutImage aboutImage02">
-              <img src="/marlen-atelier/about/about-02.png" alt="" />
+              <img src="/about/about-02.png" alt="" />
             </figure>
 
             <figure className="aboutImage aboutImage03">
-              <img src="/marlen-atelier/about/about-03.png" alt="" />
+              <img src="/about/about-03.png" alt="" />
             </figure>
 
             <figure className="aboutImage aboutImage04">
-              <img src="/marlen-atelier/about/about-04.png" alt="" />
+              <img src="/about/about-04.png" alt="" />
             </figure>
           </div>
         </div>
@@ -822,7 +822,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footerBrandLogo">
-          <img src="/marlen-atelier/logo.png" alt="MARLEN Atelier logó" />
+          <img src="/logo.png" alt="MARLEN Atelier logó" />
         </div>
       </footer>
     </main>
