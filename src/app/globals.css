@@ -1853,8 +1853,8 @@ section {
    ========================================================= */
 
 :root {
-  --privacy-button-right: 58px;
-  --privacy-button-bottom: 18px;
+  --privacy-button-right: 200px;
+  --privacy-button-bottom: 20px;
 
   --privacy-popup-width: 340px;
   --privacy-popup-max-height: 440px;
