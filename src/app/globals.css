@@ -1687,3 +1687,159 @@ section {
     scroll-margin-top: 128px;
   }
 }
+
+/* =========================================================
+   FLOATING IMPRESSZUM INFO
+   ========================================================= */
+
+.impressumFloating {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 950;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.impressumTrigger {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(179, 136, 103, 0.52);
+  border-radius: 999px;
+  background: rgba(28, 31, 33, 0.88);
+  color: var(--copper-light);
+  cursor: default;
+
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1;
+
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.impressumPopup {
+  position: absolute;
+  right: 0;
+  bottom: 44px;
+
+  width: min(420px, calc(100vw - 36px));
+  max-height: min(72vh, 620px);
+  overflow: auto;
+
+  padding: 22px 22px 20px;
+
+  background: rgba(22, 24, 26, 0.97);
+  border: 1px solid rgba(179, 136, 103, 0.24);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.44);
+  backdrop-filter: blur(10px);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  pointer-events: none;
+
+  transition:
+    opacity 0.18s ease,
+    visibility 0.18s ease,
+    transform 0.18s ease;
+}
+
+.impressumFloating:hover .impressumPopup,
+.impressumFloating:focus-within .impressumPopup {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.impressumPopup h3 {
+  margin: 0 0 16px;
+
+  color: #f3f0ea;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.impressumPopup dl {
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.impressumPopup dl div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+
+  padding: 10px 0;
+
+  border-top: 1px solid rgba(243, 240, 234, 0.08);
+}
+
+.impressumPopup dt {
+  color: rgba(243, 240, 234, 0.52);
+
+  font-family: "Roboto Condensed", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.impressumPopup dd {
+  margin: 0;
+
+  color: rgba(243, 240, 234, 0.88);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.impressumPopup a {
+  color: var(--copper-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .impressumFloating {
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .impressumTrigger {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+  }
+
+  .impressumPopup {
+    right: 0;
+    bottom: 42px;
+
+    width: calc(100vw - 28px);
+    max-height: 68vh;
+
+    padding: 20px 18px 18px;
+  }
+
+  .impressumPopup dl div {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 9px 0;
+  }
+
+  .impressumPopup dd {
+    font-size: 13px;
+  }
+}

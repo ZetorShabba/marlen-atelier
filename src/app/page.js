@@ -825,6 +825,81 @@ export default function Home() {
           <img src="/logo.png" alt="MARLEN Atelier logó" />
         </div>
       </footer>
+<div className="impressumFloating">
+  <button
+    type="button"
+    className="impressumTrigger"
+    aria-label="Impresszum adatok"
+  >
+    ⓘ
+  </button>
+
+  <div className="impressumPopup">
+    <h3>Impresszum</h3>
+
+    <dl>
+      <div>
+        <dt>Cégnév</dt>
+        <dd>MARLEN Atelier Kft.</dd>
+      </div>
+
+      <div>
+        <dt>Székhely</dt>
+        <dd>1223 Budapest, Nagytétényi út 180-196.</dd>
+      </div>
+
+      <div>
+        <dt>Cégjegyzékszám</dt>
+        <dd>01-09-383313</dd>
+      </div>
+
+      <div>
+        <dt>Adószám</dt>
+        <dd>14580361-2-43</dd>
+      </div>
+
+      <div>
+        <dt>Nyilvántartó cégbíróság</dt>
+        <dd>Fővárosi Törvényszék Cégbírósága</dd>
+      </div>
+
+      <div>
+        <dt>Képviselő / ügyvezető</dt>
+        <dd>Martonosi Csaba</dd>
+      </div>
+
+      <div>
+        <dt>Email</dt>
+        <dd>
+          <a href="mailto:sales.marlen.at@gmail.com">
+            sales.marlen.at@gmail.com
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt>Telefon</dt>
+        <dd>
+          <a href="tel:+36709486865">+36 70 948 6865</a>
+        </dd>
+      </div>
+
+      <div>
+        <dt>Weboldal</dt>
+        <dd>
+          <a href="https://www.marlenatelier.hu">
+            www.marlenatelier.hu
+          </a>
+        </dd>
+      </div>
+
+      <div>
+        <dt>Tárhelyszolgáltató</dt>
+        <dd>GitHub, Inc. / GitHub Pages</dd>
+      </div>
+    </dl>
+  </div>
+</div>
     </main>
   );
 }
