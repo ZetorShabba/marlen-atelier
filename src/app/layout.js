@@ -1,15 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "MARLEN Atelier | CNC megmunkálás és műszaki kivitelezés",
@@ -49,8 +38,7 @@ export const metadata = {
     description:
       "Faipari és műanyagipari CNC megmunkálás, prototípusgyártás és egyedi designmegoldások.",
   },
-};
-icons: {
+  icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/apple-icon.png",
@@ -59,11 +47,8 @@ icons: {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="hu">
+      <body>{children}</body>
     </html>
   );
 }
