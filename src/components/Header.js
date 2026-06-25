@@ -48,7 +48,7 @@ export default function Header() {
   return (
     <header className="header">
       <a className="brand" href="#fooldal">
-        <img src="/marlen-atelier/logo.png" alt="MARLEN Atelier logó" />
+        <img src="/logo.png" alt="MARLEN Atelier logó" />
         <div>
           <span>MARLEN</span>
           <small>ATELIER</small>
