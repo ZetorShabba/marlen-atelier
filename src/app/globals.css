@@ -1692,11 +1692,16 @@ section {
    FLOATING IMPRESSZUM INFO
    ========================================================= */
 
+:root {
+  --impressum-button-right: 18px;
+  --impressum-button-bottom: 18px;
+}
+
 .impressumFloating {
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  z-index: 950;
+  position: absolute;
+  right: var(--impressum-button-right);
+  bottom: var(--impressum-button-bottom);
+  z-index: 20;
 
   display: flex;
   flex-direction: column;
