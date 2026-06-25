@@ -1854,7 +1854,7 @@ section {
 
 :root {
   --privacy-button-right: 200px;
-  --privacy-button-bottom: 20px;
+  --privacy-button-bottom: 50px;
 
   --privacy-popup-width: 340px;
   --privacy-popup-max-height: 440px;
