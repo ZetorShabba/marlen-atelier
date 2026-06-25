@@ -2,6 +2,10 @@
 
 import { useEffect, useState } from "react";
 
+const CONTACT_EMAIL = "sales.marlen.at@gmail.com";
+const CONTACT_PHONE_DISPLAY = "+36 70 948 6865";
+const CONTACT_PHONE_LINK = "+36709486865";
+
 function BriefIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -63,12 +67,27 @@ function UploadIcon() {
 
 export default function ContactCtaSection() {
   const [isOpen, setIsOpen] = useState(false);
+  const [copied, setCopied] = useState("");
 
   const closeModal = () => {
     setIsOpen(false);
+    setCopied("");
 
     if (window.location.hash === "#ajanlatkeres") {
-      window.history.replaceState(null, "", window.location.pathname);
+      history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
+  const copyToClipboard = async (value, type) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(type);
+
+      window.setTimeout(() => {
+        setCopied("");
+      }, 1800);
+    } catch {
+      setCopied("");
     }
   };
 
@@ -143,7 +162,7 @@ export default function ContactCtaSection() {
       {isOpen && (
         <div className="requestModalOverlay" onClick={closeModal}>
           <div
-            className="requestModal"
+            className="requestModal requestModalSmall"
             role="dialog"
             aria-modal="true"
             aria-labelledby="request-modal-title"
@@ -160,51 +179,53 @@ export default function ContactCtaSection() {
 
             <div className="requestModalHeader">
               <p className="requestModalEyebrow">Ajánlatkérés</p>
+
               <h3 id="request-modal-title">
-                Írja le röviden a projektet, és felvesszük Önnel a kapcsolatot.
+                Kérjük, írjon emailt az alábbi e-mail címre.
               </h3>
+
+              <p className="requestModalSubtext">
+                Vagy keressen telefonon, és egyeztetjük a projekt részleteit.
+              </p>
             </div>
 
-            <form className="requestModalForm">
-              <div className="formRow">
-                <label>
-                  <span>Név</span>
-                  <input type="text" placeholder="Az Ön neve" />
-                </label>
+            <div className="contactPopupList">
+              <div className="contactPopupRow">
+                <span className="contactPopupLabel">Email</span>
 
-                <label>
-                  <span>Email</span>
-                  <input type="email" placeholder="email@pelda.hu" />
-                </label>
+                <strong>{CONTACT_EMAIL}</strong>
+
+                <div className="contactPopupActions">
+                  <button
+                    type="button"
+                    onClick={() => copyToClipboard(CONTACT_EMAIL, "email")}
+                  >
+                    {copied === "email" ? "Másolva" : "Másolás"}
+                  </button>
+
+                  <a href={`mailto:${CONTACT_EMAIL}`}>Email írása</a>
+                </div>
               </div>
 
-              <label>
-                <span>Telefonszám</span>
-                <input type="text" placeholder="+36 ..." />
-              </label>
+              <div className="contactPopupRow">
+                <span className="contactPopupLabel">Telefon</span>
 
-              <label>
-                <span>Projekt típusa</span>
-                <input
-                  type="text"
-                  placeholder="pl. belsőépítészeti elem, prototípus, egyedi alkatrész"
-                />
-              </label>
+                <strong>{CONTACT_PHONE_DISPLAY}</strong>
 
-              <label>
-                <span>Üzenet</span>
-                <textarea placeholder="Röviden írja le, milyen elképzelésen vagy problémán dolgozik."></textarea>
-              </label>
+                <div className="contactPopupActions">
+                  <a href={`tel:${CONTACT_PHONE_LINK}`}>Hívás indítása</a>
 
-              <label>
-                <span>Tervek / referenciák csatolása</span>
-                <input type="file" multiple />
-              </label>
-
-              <button type="button" className="requestModalSubmit">
-                Küldés
-              </button>
-            </form>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      copyToClipboard(CONTACT_PHONE_DISPLAY, "phone")
+                    }
+                  >
+                    {copied === "phone" ? "Másolva" : "Másolás"}
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}
