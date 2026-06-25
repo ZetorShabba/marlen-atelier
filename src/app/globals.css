@@ -1479,3 +1479,137 @@ section {
     top: 0;
   }
 }
+/* =========================================================
+   MOBIL HEADER FINOMHANGOLÁS
+   ========================================================= */
+
+@media (max-width: 760px) {
+  :root {
+    /* Mobil header magasságok */
+    --mobile-header-padding-top: 12px;
+    --mobile-header-padding-bottom: 10px;
+
+    /* Mobil logo + brand méretek */
+    --mobile-header-logo-size: 74px;
+    --mobile-header-logo-x: 0px;
+    --mobile-header-logo-y: 0px;
+
+    --mobile-header-brand-text-size: 18px;
+    --mobile-header-brand-subtext-size: 12px;
+    --mobile-header-brand-letter-spacing: 0.65em;
+    --mobile-header-brand-gap: 10px;
+    --mobile-header-brand-main-letter-spacing: 0.65em;
+    --mobile-header-brand-sub-letter-spacing: 1.10em;
+    --mobile-header-brand-line-width: 120px;
+
+    /* Teljes logo+felirat csoport mozgatása mobilon */
+    --mobile-header-brand-group-x: 0px;
+    --mobile-header-brand-group-y: 0px;
+
+    /* Mobil menü */
+    --mobile-nav-font-size: 10px;
+    --mobile-nav-letter-spacing: 0.08em;
+    --mobile-nav-gap: 13px;
+    --mobile-nav-margin-top: 6px;
+  }
+
+  .header {
+    height: auto;
+    min-height: 0;
+    padding:
+      var(--mobile-header-padding-top)
+      14px
+      var(--mobile-header-padding-bottom);
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--mobile-nav-margin-top);
+  }
+
+  .brand {
+    flex: none;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
+    gap: var(--mobile-header-brand-gap);
+
+    transform: translate(
+      var(--mobile-header-brand-group-x),
+      var(--mobile-header-brand-group-y)
+    );
+  }
+
+  .brand img {
+    width: var(--mobile-header-logo-size);
+    height: var(--mobile-header-logo-size);
+
+    transform: translate(
+      var(--mobile-header-logo-x),
+      var(--mobile-header-logo-y)
+    );
+  }
+
+.brand span {
+  font-size: var(--mobile-header-brand-text-size);
+  letter-spacing: var(--mobile-header-brand-main-letter-spacing);
+  line-height: 0.75;
+}
+
+.brand span::after {
+  width: var(--mobile-header-brand-line-width);
+  margin-top: 7px;
+}
+
+.brand small {
+  margin-top: 8px;
+
+  font-size: var(--mobile-header-brand-subtext-size);
+  letter-spacing: var(--mobile-header-brand-sub-letter-spacing);
+  line-height: 1;
+}
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navPill {
+    width: 100%;
+    min-height: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--mobile-nav-gap);
+
+    overflow: visible;
+  }
+
+  .nav a {
+    flex: 0 1 auto;
+
+    font-size: var(--mobile-nav-font-size);
+    letter-spacing: var(--mobile-nav-letter-spacing);
+    white-space: nowrap;
+  }
+
+  /* Mobilon az Ajánlatkérés gomb eltűnik a headerből */
+  .navCta {
+    display: none;
+  }
+
+  html {
+    scroll-padding-top: 128px;
+  }
+
+  .site {
+    padding-top: 128px;
+  }
+
+  section {
+    scroll-margin-top: 128px;
+  }
+}
