@@ -823,14 +823,14 @@ export default function Home() {
         </div>
         <div className="footerBrandLogo">
           <img src="/logo.png" alt="MARLEN Atelier logó" />
-       <div className="impressumFloating">
-  <button
+       <details className="impressumFloating">
+  <summary
     type="button"
     className="impressumTrigger"
     aria-label="Impresszum adatok"
   >
     ⓘ
-  </button>
+  </summary>
 
   <div className="impressumPopup">
     <h3>Impresszum</h3>
@@ -897,7 +897,107 @@ export default function Home() {
       </div>
     </dl>
   </div>
-</div> 
+</details> 
+<details className="privacyFloating">
+  <summary
+    type="button"
+    className="privacyTrigger"
+    aria-label="Adatkezelési tájékoztató"
+  >
+    AD
+  </summary>
+
+  <div className="privacyPopup">
+    <h3>Adatkezelési tájékoztató</h3>
+
+    <p>
+      A MARLEN Atelier Kft. a weboldalon megadott elérhetőségeken keresztül
+      érkező megkeresések során kezeli az érdeklődők által önkéntesen megadott
+      személyes adatokat.
+    </p>
+
+    <dl>
+      <div>
+        <dt>Adatkezelő</dt>
+        <dd>
+          MARLEN Atelier Kft.
+          <br />
+          1223 Budapest, Nagytétényi út 180-196.
+          <br />
+          sales.marlen.at@gmail.com
+          <br />
+          +36 70 948 6865
+        </dd>
+      </div>
+
+      <div>
+        <dt>Kezelt adatok</dt>
+        <dd>
+          Az emailben vagy telefonon megadott név, email cím, telefonszám,
+          cégnév, projektleírás, valamint az önkéntesen megküldött egyéb adatok.
+        </dd>
+      </div>
+
+      <div>
+        <dt>Adatkezelés célja</dt>
+        <dd>
+          Kapcsolatfelvétel, ajánlatkérés megválaszolása, projekt egyeztetése és
+          üzleti együttműködés előkészítése.
+        </dd>
+      </div>
+
+      <div>
+        <dt>Jogalap</dt>
+        <dd>
+          Az érintett önkéntes megkeresése alapján történő kapcsolatfelvétel,
+          ajánlatkérés megválaszolása, illetve az ehhez kapcsolódó jogos üzleti
+          érdek.
+        </dd>
+      </div>
+
+      <div>
+        <dt>Megőrzési idő</dt>
+        <dd>
+          Az adatokat a megkeresés lezárásáig, illetve legfeljebb az utolsó
+          kapcsolatfelvételtől számított 12 hónapig kezeljük, kivéve, ha
+          jogszabály hosszabb megőrzési időt ír elő, vagy szerződéses kapcsolat
+          jön létre.
+        </dd>
+      </div>
+
+      <div>
+        <dt>Adattovábbítás</dt>
+        <dd>
+          A MARLEN Atelier Kft. a személyes adatokat harmadik fél részére nem
+          értékesíti. Az adatokhoz kizárólag a megkeresés kezelésében érintett
+          személyek férhetnek hozzá.
+        </dd>
+      </div>
+
+      <div>
+        <dt>Érintetti jogok</dt>
+        <dd>
+          Az érintett kérheti személyes adatainak tájékoztatását, helyesbítését,
+          törlését, kezelésének korlátozását, valamint tiltakozhat az adatkezelés
+          ellen.
+        </dd>
+      </div>
+
+      <div>
+        <dt>Jogorvoslat</dt>
+        <dd>
+          Panasz esetén az érintett a Nemzeti Adatvédelmi és Információszabadság
+          Hatósághoz fordulhat.
+          <br />
+          Weboldal:{" "}
+          <a href="https://www.naih.hu" target="_blank" rel="noreferrer">
+            www.naih.hu
+          </a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</details>
        </div>
       </footer>
     </main>
